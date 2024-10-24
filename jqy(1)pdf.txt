@@ -1,0 +1,426 @@
+Here's the content you provided, formatted properly:
+
+---
+
+**Sweta Prajapati, T.20.112**  
+**Practical 7 - Programs on Basic jQuery**
+
+### Practical 7.a)
+**Aim:** jQuery Basic, jQuery Events  
+**Solution:**
+
+#### I. Write a jQuery to change text contents of the elements on button click.  
+**Code:**
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            document.write("hello world");
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>Hello! Welcome to jQuery Language!</p>
+    <button>Click me</button>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+#### II. Write a jQuery to select elements by class name, id, and element name.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".class1").css("background", "#ADF7F7");
+        $("#id1").css("background", "#DEC7FF");
+        $("h2").css("background", "#C5F0D0");
+    });
+    </script>
+</head>
+<body>
+    <p class="class1">Hello!</p>
+    <p id="id1">Students</p>
+    <h2>Welcome to jQuery Language!</h2>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+#### III. Write a jQuery to show the use of click(), hover(), on(), trigger(), off() events.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#b1").hover(function() {
+            document.write("hello world");
+        });
+        $("p").on("click", function() {
+            $(this).css("background-color", "pink");
+        });
+        $("#b2").click(function() {
+            $("p").off("click");
+        });
+        $("#b3").on("click", function() {
+            $("#t1").hide();
+        });
+        $("input").select(function() {
+            $("input").after(" Text marked!");
+        });
+        $("#b4").click(function() {
+            $("input").trigger("select");
+        });
+    });
+    </script>
+</head>
+<body>
+    <button id="b1">Hover</button><br />
+    <p>Hello, welcome to Mulund College of Commerce!</p>
+    <p>TYIT students</p>
+    <button id="b2">Off</button><br /><br />
+    <p id="t1">Hello world</p><br />
+    <button id="b3">On</button><br /><br />
+    <input type="text" value="Hello World" /><br /><br />
+    <button id="b4">Trigger</button>
+</body>
+</html>
+```
+**Output:** After Hovering on Hover Button
+
+---
+
+**Sweta Prajapati, T.20.112**  
+### Practical 7.b)
+**Aim:** jQuery Selectors, jQuery Hide and Show effects.  
+
+#### I. Write a jQuery to create animated show/hide effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#b1").click(function() {
+            $("p").hide();
+        });
+        $("#b2").click(function() {
+            $("p").show();
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>Mulund College of Commerce</p>
+    <button id="b1">Hide</button>
+    <button id="b2">Show</button>
+</body>
+</html>
+```
+**Output:** After clicking Show Button
+
+---
+
+#### II. Write a jQuery to create a simple toggle effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("p").toggle();
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button>Toggle between hide() and show()</button>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+### Practical 7.c)
+**Aim:** jQuery fading effects, jQuery sliding effects  
+
+#### I. Write a jQuery to create fade-in and fade-out effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".btn1").click(function() {
+            $("p").fadeOut();
+        });
+        $(".btn2").click(function() {
+            $("p").fadeIn();
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>SIES College of Arts Science and Commerce</p>
+    <button class="btn1">Fade out</button>
+    <button class="btn2">Fade in</button>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+#### II. Write a jQuery to create fade toggle effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".toggle-btn").click(function() {
+            $("p").fadeToggle();
+        });
+    });
+    </script>
+</head>
+<body>
+    <button type="button" class="toggle-btn">Click</button>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+#### III. Write a jQuery to create slide-up and slide-down effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".up-btn").click(function() {
+            $("p").slideUp();
+        });
+        $(".down-btn").click(function() {
+            $("p").slideDown();
+        });
+    });
+    </script>
+</head>
+<body>
+    <button type="button" class="up-btn">Slide Up Paragraphs</button>
+    <button type="button" class="down-btn">Slide Down Paragraphs</button>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</body>
+</html>
+```
+**Output:** Slide Down effect, Slide Up effect
+
+---
+
+#### IV. Write a jQuery to create slide toggle effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".toggle-btn").click(function() {
+            $("p").slideToggle();
+        });
+    });
+    </script>
+</head>
+<body>
+    <button type="button" class="toggle-btn">Slide Toggle Paragraphs</button>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+**Sweta Prajapati, T.20.112**  
+### Practical 8 - jQuery Advanced
+
+#### Practical 8.a)
+**Aim:** jQuery Animation effects, jQuery Chaining.  
+
+#### I. Write a jQuery to create animation effect.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <style>
+        img {
+            position: relative; /* Required to move element */
+        }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("img").animate({ left: 300 });
+        });
+    });
+    </script>
+</head>
+<body>
+    <button>Start Animation</button><br />
+    <img src="jquery.png" alt="jQuery" height="270px" width="240px" />
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+#### II. Write a jQuery to animate multiple CSS properties.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.js"></script>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #9d7ede;
+            margin-top: 30px;
+            border-style: solid;
+            border-color: #6f40ce;
+        }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $(".box").animate({
+                width: "300px",
+                height: "300px",
+                marginLeft: "150px",
+                borderWidth: "10px",
+                opacity: 0.5,
+            });
+        });
+    });
+    </script
+
+>
+</head>
+<body>
+    <button>Animate Box</button>
+    <div class="box"></div>
+</body>
+</html>
+```
+**Output:** 
+
+---
+
+### Practical 8.b)
+**Aim:** jQuery Plugins, jQuery Mobile.  
+
+#### I. Write a jQuery to create a simple image slider.  
+**Code:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slider</title>
+    <script src="jquery.js"></script>
+    <style>
+        #slider {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+        #slider img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        #slider img.active {
+            display: block;
+        }
+    </style>
+    <script>
+    $(document).ready(function() {
+        let currentIndex = 0;
+        const images = $('#slider img');
+        const imageCount = images.length;
+
+        images.eq(currentIndex).addClass('active');
+
+        setInterval(function() {
+            images.eq(currentIndex).removeClass('active');
+            currentIndex = (currentIndex + 1) % imageCount;
+            images.eq(currentIndex).addClass('active');
+        }, 2000);
+    });
+    </script>
+</head>
+<body>
+    <div id="slider">
+        <img src="image1.jpg" alt="Image 1" />
+        <img src="image2.jpg" alt="Image 2" />
+        <img src="image3.jpg" alt="Image 3" />
+    </div>
+</body>
+</html>
+```
+**Output:** Image Slider
+
+---
+
+This should provide a clean presentation of your practicals with all necessary details included! Let me know if you need further adjustments.
