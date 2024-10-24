@@ -1,0 +1,32 @@
+write a jquery to show animation effect
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<style>
+ img{
+ position:relative;
+ }
+</style>
+<script>
+ $(document).ready(function() {
+ $("#b1").click(function()
+ {
+ $("img").animate({left:300});
+ });
+ });
+</script>
+</head>
+<body>
+
+ <!--<h1>jQuery element Selector</h1>-->
+ <!--<p>This is p tag</p>-->
+ <!--<span>This is span tag</span>-->
+ <div>This is div tag</div>
+ <image
+src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=ti
+nysrgb&w=600" height=200 width=200></image>
+ <button id="b1">Animate</button>
+</body>
+</html>
