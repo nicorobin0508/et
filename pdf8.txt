@@ -1,0 +1,152 @@
+ write a jquery to create animated show query effect
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+ $(document).ready(function() {
+ $("#b1").click(function(){
+ $("div").hide();
+ });
+
+ $("#b2").click(function(){
+ $("div").show();
+ });
+ });
+</script>
+</head>
+<body>
+ <div>This is div tag</div>
+ <button id="b1">Hide</button>
+ <button id="b2">Show</button>
+</body>
+</html>
+write a jquery to create a simple toggle effect
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+ $(document).ready(function() {
+ $("#b1").click(function(){
+ $("div").toggle();
+ });
+ });
+</script>
+</head>
+<body>
+ <div>This is a div tag</div>
+<button id="b1">Hide/show</button>
+</body>
+</html>
+ write a jquery to create fade in and fade out effect
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+ $(document).ready(function() {
+ $("#b1").click(function()
+ {
+ $("div").fadeIn(1000);
+ })
+ $("#b2").click(function(){
+ $("div").fadeOut(800);
+ })
+ });
+</script>
+</head>
+<body>
+ <div>This is div tag</div>
+ <button id="b1">Fade In</button>
+ <button id="b2">Fade Out</button>
+</body>
+</html>
+ write a jquery to fade in and fade out using toggle
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+ $(document).ready(function() {
+ $("#b1").click(function(){
+ $("div").toggle();
+ });
+ });
+</script>
+</head>
+<body>
+ <div>This is a div tag</div>
+ <button id="b1">Fade In/Fade Out</button>
+</body>
+</html>
+write a jquery to slide in and slide out
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+ $(document).ready(function() {
+ $("#b1").click(function()
+ {
+ $("div").slideUp();
+ });
+ $("#b2").click(function()
+ {
+ $("div").slideDown();
+ });
+ });
+</script>
+</head>
+<body>
+ <div>This is a div tag</div>
+ <button id="b1">Slide In</button>
+ <button id="b2">Slide Out</button>
+</body>
+</html>
+write a jquery to show the user click function on hover,click trigger and click off
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+ $(document).ready(function() {
+ $("#b1").hover(function(){
+ document.write("tyit you are welcomed to this practical")
+ });
+ $("p").on("click",function()
+ {
+ $(this).css("background-color","pink")
+ });
+ $("#b2").click(function(){
+ $("p").off("click");
+ })
+ $("#b3").click(function(){
+ $("#p1").hide();
+ })
+ $("input").select(function(){
+ $("input").after("Text Marked");
+ })
+ $("b4").click(function(){
+ $("input").trigger("select");
+ })
+ });
+</script>
+</head>
+<body>
+ <button id="b1">Hover effect</button>
+ <p>Welcome to practical</p>
+ <p>TYIT</p>
+ <button id="b2">Off Effect</button>
+ <p id="p1">Hello Students</p>
+ <button id="b3">On Effect</button>
+ <input type="text" value="hello Moto"/>
+ <button id="b4">Trigger Effect</button>
+</body>
+</html>
