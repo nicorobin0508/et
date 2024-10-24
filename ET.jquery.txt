@@ -1,0 +1,311 @@
+Here’s the content divided into sections with appropriate questions added:
+
+### 1. How can you hide a paragraph with a slow animation and alert when it's hidden?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide("slow", function() {
+                    alert("The paragraph is now hidden");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>click</button>
+    <p>This is a paragraph</p>
+</body>
+</html>
+```
+
+---
+
+### 2. How can you get and set the text of a paragraph using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                var str = $("p").text();
+                alert(str);
+            });
+            $(".b2").click(function() {
+                $("p").text("this is demo text.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <button class="b1">Get all paragraph's Text</button>
+    <p>This is another paragraph.</p>
+    <p>This is a paragraph tag.</p>
+</body>
+</html>
+```
+
+---
+
+### 3. How can you retrieve and modify multiple paragraphs using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                var str = $("p").text();
+                alert(str);
+            });
+            $(".b2").click(function() {
+                $("p").text("this is demo text.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <button class="b1">Get all paragraph's Text</button>
+    <p>This is p tag</p>
+    <p>another paragraph</p>
+</body>
+</html>
+```
+
+---
+
+### 4. How can you replace the entire body content with new HTML using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                var str = $("p").text();
+                alert(str);
+            });
+            $(".b2").click(function() {
+                $("body").html("<p>Hello Guys</p>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <button class="b1">get all paragraph text</button>
+    <p>Hello dear</p>
+    Welcome
+    <b>Saniya.</b>
+    <button class="b2">Change body content</button>
+    <p>Have a good day</p>
+</body>
+</html>
+```
+
+---
+
+### 5. How can you prepend content to a paragraph and append content to a container using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                $("p").prepend("<strong>Note:</strong>");
+            });
+            $(".b2").click(function() {
+                $("#container").append("OK bye Have a nice day.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <button class="b1">Prepend to paragraph</button>
+    <p>Welcome Friends</p>
+    <button class="b2">Click Me</button>
+    <div id="container">
+        <p>SIES College of Nerul</p>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### 6. How can you get an image's `alt` attribute and check a checkbox using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                var str = $("#jquery").attr("alt");
+                alert(str);
+            });
+            $(".b2").click(function() {
+                $('input[type="checkbox"]').attr("checked", "checked");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <button class="b1">Get Image Alt Text</button>
+    <img id="jquery" src="any image path" height="300px" width="300px"/>
+    <br><br>
+    <p><input type="checkbox"/>I agree with this.</p>
+    <button class="b2">Click here</button>
+</body>
+</html>
+```
+
+---
+
+### 7. How can you append new content to the body using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                var newHeading = "<h1>Important Note:</h1>";
+                var newParagraph = document.createElement("p");
+                newParagraph.innerHTML = "<em>Hello Buddy</em>";
+                $("body").append(newHeading, newParagraph);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <button class="b1">Add Note</button>
+    <p>Welcome Guys</p>
+</body>
+</html>
+```
+
+---
+
+### 8. How can you remove an element from the DOM using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").click(function() {
+                $("div#demo").remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <div id="demo">
+        <p>HELLO SANIYA</p>
+    </div>
+    <p>WELCOME BUDDY.</p>
+    <button class="btn">OK bye</button>
+</body>
+</html>
+```
+
+---
+
+### 9. How can you unwrap a paragraph from its parent element using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").unwrap();
+            });
+        });
+    </script>
+    <style>
+        div {
+            background-color: pink;
+        }
+        article {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <div>
+        <p>Saniya</p>
+    </div>
+    <article>
+        <p>Gupta</p>
+    </article>
+    <button>Click me</button>
+</body>
+</html>
+```
+
+---
+
+### 10. How can you remove a specific class from paragraph elements using jQuery?
+```html
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").removeClass("intro");
+            });
+        });
+    </script>
+    <style>
+        .intro {
+            font-size: 200%;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery element Selector</h1>
+    <p class="intro">Saniya</p>
+    <p class="intro">Gupta</p>
+</body>
+</html>
+```
+
+---
+
+Feel free to let me know if you need any further adjustments!
