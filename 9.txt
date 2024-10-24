@@ -1,0 +1,149 @@
+
+9. jQuery Advanced
+a. jQuery Animation effects, jQuery Chaining
+(There is no specific code provided for this section in the given text.)
+
+b. jQuery Callback, jQuery Get and Set Contents
+html
+Copy code
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                var newHeading = "<h1>Important Note:</h1>";
+                var newParagraph = document.createElement("p");
+                newParagraph.innerHTML = "<em>Lorem Ipsum is dummy text...</em>";
+                $("p").before(newHeading, newParagraph);
+            });
+            $(".b2").click(function() {
+                var newHeading = "<h1>Important Note:</h1>";
+                var newParagraph = document.createElement("p");
+                newParagraph.innerHTML = "<em>Lorem Ipsum is dummy text...</em>";
+                $("p").before(newHeading, newParagraph);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button class="b1">Insert Contents</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisong elit.</p>
+</body>
+</html>
+c. jQuery Insert Content, jQuery Remove Elements and Attribute
+Removing an element:
+html
+Copy code
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").click(function() {
+                $("#demo").remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="demo">
+        <p id="demo"> Inside Div Element</p>
+    </div>
+    <p>Outside Div Element</p>
+    <button class="btn"> Hide the element inside div</button>
+</body>
+</html>
+Unwrapping an element:
+html
+Copy code
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").unwrap();
+            });
+        });
+    </script>
+    <style>
+        div {
+            background-color: yellow;
+        }
+        article {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph inside a div element</p>
+    </div>
+    <article>
+        <p>This is a paragraph inside an article element</p>
+    </article>
+    <button>Remove the parent element of each p element</button>
+</body>
+</html>
+Removing a specific attribute:
+html
+Copy code
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").removeAttr("style");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph inside a div element</p>
+    </div>
+    <article>
+        <p style="background-color: yellow">This is a paragraph inside an article element</p>
+    </article>
+    <button>Remove the style attribute of each p element</button>
+</body>
+</html>
+Removing a class:
+html
+Copy code
+<!doctype html>
+<html>
+<head>
+    <title>Online jQuery Editor</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").removeClass("intro");
+            });
+        });
+    </script>
+    <style>
+        .intro {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p class="intro">This is a paragraph.</p>
+    <p class="intro">This is another paragraph.</p>
+    <button>Remove the "intro" class from all p elements</button>
+</body>
+</html>
